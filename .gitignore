@@ -28,10 +28,7 @@ ENV/
 .env.local
 *.env
 
-# --- Model checkpoints (large binary files) ---
-models/*.pth
-models/*.pt
-models/*.ckpt
+
 # Remove the line above if you want to commit the checkpoint directly.
 # For files > 50 MB, use Git LFS instead:
 #   git lfs track "models/*.pth"
