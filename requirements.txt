@@ -1,0 +1,34 @@
+# Core deep learning stack (CPU build of PyTorch is fine — no CUDA required).
+# Version is left as a lower bound (>=) rather than pinned exactly, because
+# very old torch builds (e.g. 2.3.x) are not published for newer Python
+# versions (3.13+). Pip will install the latest compatible build for your
+# Python version automatically.
+torch>=2.6.0
+torchvision>=0.21.0
+
+# Web app for inference / demo
+streamlit>=1.36.0
+
+# Image processing
+opencv-python-headless>=4.10.0.84
+Pillow>=10.4.0
+
+# Data handling
+numpy>=1.26.4
+pandas>=2.2.2
+
+# Plotting (confusion matrix, training curves, sample predictions)
+matplotlib>=3.9.0
+
+# Metrics (precision, recall, F1, confusion matrix)
+scikit-learn>=1.5.0
+
+# Progress bars during training/evaluation loops
+tqdm>=4.66.4
+
+# Optional: powers the "Explain this heatmap in plain language" feature in
+# app.py, which uses an LLM (via Groq's API) to describe Grad-CAM results.
+# The app works fully without this — the button only appears if a
+# GROQ_API_KEY environment variable is set. Safe to leave installed even if
+# unused.
+groq>=0.11.0

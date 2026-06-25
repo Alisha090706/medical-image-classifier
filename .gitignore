@@ -1,0 +1,67 @@
+# =============================================================================
+# MediScan AI — .gitignore
+# =============================================================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+wheels/
+*.so
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# --- Environment variables / secrets ---
+.env
+.env.local
+*.env
+
+# --- Model checkpoints (large binary files) ---
+models/*.pth
+models/*.pt
+models/*.ckpt
+# Remove the line above if you want to commit the checkpoint directly.
+# For files > 50 MB, use Git LFS instead:
+#   git lfs track "models/*.pth"
+
+# --- Dataset (never commit ~2 GB of images) ---
+chest_xray/
+data/
+
+# --- Generated outputs ---
+outputs/training_loss.png
+outputs/training_accuracy.png
+outputs/confusion_matrix.png
+outputs/metrics.json
+outputs/gradcam/
+outputs/sample_predictions/
+# Keep the placeholder files so the directories exist in the repo:
+!outputs/.gitkeep
+!outputs/sample_predictions/.gitkeep
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
