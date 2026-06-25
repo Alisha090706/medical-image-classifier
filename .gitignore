@@ -40,13 +40,7 @@ models/*.ckpt
 chest_xray/
 data/
 
-# --- Generated outputs ---
-outputs/training_loss.png
-outputs/training_accuracy.png
-outputs/confusion_matrix.png
-outputs/metrics.json
-outputs/gradcam/
-outputs/sample_predictions/
+
 # Keep the placeholder files so the directories exist in the repo:
 !outputs/.gitkeep
 !outputs/sample_predictions/.gitkeep
