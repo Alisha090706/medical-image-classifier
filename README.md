@@ -260,21 +260,8 @@ followed in order.
 
 ---
 
-## 8. Deployment Notes
-
-- **Local / personal use**: `streamlit run app.py` is sufficient — no
-  additional setup needed.
-- **Sharing with others**: Streamlit Community Cloud, Hugging Face Spaces,
-  or any container host (Docker) that can run Python + pip-installed
-  dependencies will work. Since this project is CPU-only by design, no GPU
-  instance is required for hosting either.
-- **Before deploying publicly**: make sure `models/best_model.pth` is
-  included in your deployment (either committed via Git LFS or fetched at
-  startup), since the app cannot make predictions without it.
-- Re-running `train.py` or `evaluate.py` is never required at app startup —
-  the app only reads the already-saved checkpoint and metrics file, so
-  startup is fast.
-
+## 8. Demo
+[Medical_Image_Classifier](https://medical-image-classifier-menigrdhfned9fbm3zonbt.streamlit.app/)
 ---
 
 ## Tech Stack
